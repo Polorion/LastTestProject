@@ -1,0 +1,44 @@
+@import "src/scss/vars";
+
+.body {
+  padding: 12px 19px;
+  border: 1px solid $green;
+  display: inline-block;
+  border-radius: 9px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.5s;
+  -webkit-box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.75);
+
+
+  &.active {
+    background-color: $blackButton;
+    color: $white;
+    border-color: transparent;
+    -webkit-box-shadow: inset 9px 12px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 9px 12px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 9px 12px 5px 0px rgba(0, 0, 0, 0.75);
+    animation: example 1s ease;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .body {
+    font-size: 14px;
+  }
+}
+
+@keyframes example {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg)
+  }
+}

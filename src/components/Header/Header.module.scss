@@ -1,0 +1,12 @@
+.body {
+  .logo {
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .logo {
+
+    display: flex;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,1 @@
+export const dataBusinessForm = ['ИП', 'АО', 'ООО', 'Самозанятый', 'Не указывать']

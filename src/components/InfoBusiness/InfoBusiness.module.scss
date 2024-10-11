@@ -1,0 +1,139 @@
+@import "src/scss/vars";
+
+.body {
+  max-width: 381px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+
+  margin-bottom: 10px;
+
+  .header {
+    margin-bottom: 51px;
+
+    h1 {
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: $black;
+    }
+
+    p {
+      font-size: 20px;
+      color: $liteGray;
+    }
+  }
+
+  .formaJob {
+    margin-bottom: 10px;
+  }
+
+  .formaJob {
+    display: flex;
+
+    div {
+
+    }
+  }
+
+  .form {
+    .bodyInput {
+      position: relative;
+      margin-bottom: 31px;
+
+      &:after {
+        content: 'Ваше имя';
+        position: absolute;
+        top: -8px;
+        padding: 0 5px;
+        left: 20px;
+        font-size: 15px;
+        color: $green;
+        background-color: #fff;
+        z-index: 1;
+      }
+    }
+
+    .nameInput {
+      position: relative;
+      border: 1.5px solid $black;
+      border-radius: 10px;
+      padding: 15px 25px;
+      z-index: 0;
+
+
+    }
+  }
+
+  .nextPage {
+    position: absolute;
+    bottom: -30px;
+    right: 60px;
+
+    .bodyNext {
+      position: relative;
+
+      a {
+        color: $black;
+      }
+
+      svg {
+        position: absolute;
+        bottom: -15px;
+        right: -40px;
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 480px) {
+  .header {
+    margin-bottom: 51px;
+
+    h1 {
+      font-size: 20px !important;
+      text-align: center;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    p {
+      text-align: center;
+      font-size: 12px !important;
+    }
+  }
+  .bodyInput {
+    input {
+      width: 100%;
+    }
+
+  }
+  .nextPage {
+    position: static !important;
+
+
+    .bodyNext {
+      background-color: $black;
+      border-radius: 10px;
+      color: $white;
+      right: 0 !important;
+      padding: 15px 0;
+
+      a {
+        color: $white !important;
+      }
+
+      .none {
+        display: none;
+      }
+
+      img {
+        display: none;
+      }
+    }
+  }
+}
+
+

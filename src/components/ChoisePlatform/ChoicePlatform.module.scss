@@ -1,0 +1,137 @@
+@import "src/scss/vars";
+
+.container {
+  padding: 0 10px;
+}
+
+.body {
+  max-width: 501px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .icon {
+    position: relative;
+
+    svg {
+      &:hover {
+        path {
+          stroke: $white
+        }
+
+        fill: $green;
+      }
+
+      cursor: pointer;
+    }
+
+    img {
+      cursor: pointer;
+    }
+
+    .hover {
+      position: absolute;
+      top: 30px;
+      left: -38px;
+      font-size: 10px;
+      width: 100px;
+      border: 1px solid green;
+      text-align: center;
+      border-radius: 10px;
+      padding: 10px;
+
+
+    }
+  }
+
+  .choice {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 45px;
+  }
+
+  .header {
+    .subTitle {
+      display: flex;
+    }
+
+    h1 {
+      font-size: 32px;
+      color: $black;
+      margin-bottom: 16px;
+      font-weight: 600;
+    }
+
+    p {
+      color: $liteGray;
+      font-size: 20px;
+      margin-bottom: 66px;
+    }
+
+    img {
+      position: relative;
+      top: 5px;
+      left: 10px;
+
+
+    }
+  }
+
+  .btnNav {
+    .back {
+      background-color: $white;
+      margin-right: 38px;
+      color: $black;
+      border-radius: 10px;
+    }
+
+    .next {
+      padding: 17px 38px;
+      background-color: $black;
+      color: $white;
+      border-radius: 10px;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .body {
+    .header {
+      h1 {
+        text-align: center;
+      }
+
+      p {
+        text-align: center;
+      }
+    }
+
+    .btnNav {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+
+      .back {
+        background-color: $white;
+        margin-right: 0px;
+        color: $black;
+        border-radius: 10px;
+        width: 100%;
+        text-align: center;
+        padding: 17px 38px;
+        order: 2;
+      }
+
+      .next {
+        padding: 17px 38px;
+
+        background-color: $black;
+        color: $white;
+        border-radius: 10px;
+        width: 100%;
+      }
+    }
+  }
+}
