@@ -6,13 +6,12 @@ import {Choice} from "../Choice/Choice.jsx";
 import {useState} from "react";
 import {useDispatch} from "react-redux";
 
-export const BlockChoice = ({title, data, choice, action, addRedux, quest = undefined}) => {
+export const BlockChoice = ({title, data,  action, quest = undefined}) => {
     const [isHover, setIsHover] = useState(false)
     const dispatch = useDispatch()
 
     const handlerChoice = (el) => {
-        action([el])
-        dispatch(addRedux(el))
+        dispatch( action(el))
     }
 
     return (
@@ -25,7 +24,7 @@ export const BlockChoice = ({title, data, choice, action, addRedux, quest = unde
                     {isHover && <div className={S.hover}>можно выбрать один из пунктов</div>}</div>}
             </div>
             <div className={S.content}>
-                {data.map((el, i) => <Choice action={handlerChoice} choice={choice} key={i} text={el}/>)}
+                {data.map((el, i) => <Choice action={handlerChoice}  key={i} item={el}/>)}
             </div>
         </div>
     );

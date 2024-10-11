@@ -8,20 +8,23 @@
   margin: 0 auto;
 
   margin-bottom: 10px;
+  position: relative;
 
   .header {
-    margin-bottom: 51px;
+    margin-bottom: 60px;
 
     h1 {
       font-size: 32px;
-      font-weight: 600;
+      font-weight: 900;
+      letter-spacing: 1px;
       margin-bottom: 15px;
-      color: $blackButton;
+      color: $black;
     }
 
     p {
       font-size: 20px;
       color: $liteGray;
+      font-weight: 400;
     }
   }
 
@@ -40,7 +43,11 @@
   .form {
     .bodyInput {
       position: relative;
-      margin-bottom: 31px;
+      margin-bottom: 30px;
+      width: 95%;
+      input {
+        width: 100%;
+      }
 
       &:after {
         content: 'Ваше имя';
@@ -57,10 +64,11 @@
 
     .nameInput {
       position: relative;
-      border: 1.5px solid $blackButton;
+      border: 1.5px solid $grayInput;
       border-radius: 10px;
       padding: 15px 25px;
       z-index: 0;
+      color: $blackButton;
 
 
     }
@@ -69,7 +77,8 @@
   .nextPage {
     position: absolute;
     bottom: -30px;
-    right: 60px;
+    right: -20rem;
+
 
     .bodyNext {
       position: relative;
@@ -88,7 +97,7 @@
 }
 
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 600px) {
   .header {
     margin-bottom: 51px;
 
@@ -134,6 +143,27 @@
       }
     }
   }
+}
+
+@media only screen and (max-width: 1100px) {
+  .body {
+    .nextPage {
+      position: absolute;
+      bottom: -30px;
+      right: -50%;
+    }
+  }
+
+}
+@media only screen and (max-width: 845px) {
+  .body {
+    .nextPage {
+      position: absolute;
+      bottom: -30px;
+      right: -20%;
+    }
+  }
+
 }
 
 

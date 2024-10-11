@@ -1,13 +1,15 @@
 @import "src/scss/vars";
 
 .body {
-  padding: 12px 19px;
+  word-break:break-all;
+  padding: 11px 19px;
   border: 1px solid $green;
   display: inline-block;
   border-radius: 9px;
   margin-right: 10px;
   margin-bottom: 10px;
   cursor: pointer;
+  font-size: 14.5px;
   transition: all 0.5s;
   -webkit-box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.75);
@@ -32,13 +34,18 @@
 
 @media only screen and (max-width: 480px) {
   .body {
-    font-size: 12px;
+    font-size: 17px;
     padding: 7px 12px;
   }
 }
 @media only screen and (max-width: 380px) {
   .body {
-    font-size: 11px;
+    font-size: 14px;
+    padding: 5px 8px;
+  }
+}@media only screen and (max-width: 280px) {
+  .body {
+    font-size: 12px;
     padding: 5px 8px;
   }
 }

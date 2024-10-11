@@ -5,6 +5,8 @@
     position: relative;
     padding: 13px;
     margin: 0 auto;
+    height: 107vh;
+    overflow: hidden;
 }
 
 .slide-enter,
@@ -25,9 +27,10 @@
     top: 0;
     left: 0;
     width: 100%;
-    transform: translateX(0%);
+    transform: translateX(10%);
 }
 
 .slide-exit-active {
     transform: translateX(-3000%);
+    display: none;
 }

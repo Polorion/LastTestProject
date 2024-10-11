@@ -3,11 +3,7 @@ import S from './InfoBusiness.module.scss'
 import {useForm} from "react-hook-form";
 import quest from '../../assets/question.svg'
 import Arrow from '../../assets/arrow.svg'
-import {dataBusinessForm} from "../dataStatic/businesForm.js";
 import {BlockChoice} from "../shared/BlockChoice/BlockChoice.jsx";
-import {jobForma} from "../dataStatic/jobForma.js";
-import {countForm} from "../dataStatic/countForm.js";
-import {choiceHelperForm} from "../dataStatic/choiceHelperForm.js";
 import {useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {
@@ -21,12 +17,13 @@ import {Link} from "react-router-dom";
 
 export const InfoBusiness = () => {
     const nameValue = useSelector(state => state.main.name)
+    const jobForm = useSelector(state => state.main.formJob)
+    const dataBusinessForm = useSelector(state => state.main.formBusiness)
+    const countForm = useSelector(state => state.main.formCount)
+    const choiceHelperForm = useSelector(state => state.main.FormManager)
     const dispatch = useDispatch()
 
-    const [choiceForm, setChoiceForm] = useState([])
-    const [choiceJob, setChoiceJob] = useState([])
-    const [choiceCount, setChoiceCount] = useState([])
-    const [choiceManager, setChoiceManager] = useState([])
+
     const {register, handleSubmit, formState, clearErrors} = useForm({
         mode: "onTouched"
     })
@@ -46,26 +43,23 @@ export const InfoBusiness = () => {
                     })} type="text"/>
                 </div>
                 <div className={S.formaJob}>
-                    <BlockChoice addRedux={setChoiceBusinessRedux} title={'Форма бизнеса:'} data={dataBusinessForm}
+                    <BlockChoice action={setChoiceBusinessRedux} title={'Форма бизнеса:'} data={dataBusinessForm}
                                  quest={quest}
-                                 action={setChoiceForm}
-                                 choice={choiceForm}/>
+                              />
                 </div>
                 <div className={S.formaJob}>
-                    <BlockChoice addRedux={setChoiceJobRedux} title={'Деятельность:'} data={jobForma}
-                                 action={setChoiceJob}
-                                 choice={choiceJob}/>
+                    <BlockChoice action={setChoiceJobRedux} title={'Деятельность:'} data={jobForm}
+                                 />
                 </div>
                 <div className={S.formaJob}>
-                    <BlockChoice addRedux={setChoiceCountRedux} title={'Количество сотрудников в штате:'}
+                    <BlockChoice action={setChoiceCountRedux} title={'Количество сотрудников в штате:'}
                                  data={countForm}
-                                 action={setChoiceCount}
-                                 choice={choiceCount}/>
+                               />
                 </div>
                 <div className={S.formaJob}>
-                    <BlockChoice addRedux={setChoiceManagerRedux}
+                    <BlockChoice action={setChoiceManagerRedux}
                                  title={'Требуется ли вам личный менеджер для помощи с ONYX CRM? Вся помощь предоставляется бесплатно.'}
-                                 data={choiceHelperForm} choice={choiceManager} action={setChoiceManager}/>
+                                 data={choiceHelperForm} />
                 </div>
             </form>
             <button className={S.nextPage}>

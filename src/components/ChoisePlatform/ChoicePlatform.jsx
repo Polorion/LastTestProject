@@ -1,25 +1,20 @@
 import * as React from 'react';
 import S from './ChoicePlatform.module.scss'
 import Quest from "../../assets/question.svg";
-import {choiceUsePlatform} from "../dataStatic/choiceUsePlatform.js";
 import {Choice} from "../shared/Choice/Choice";
 import {useState} from "react";
-import {deleteChoicePlatformRedux, senData, setChoicePlatformRedux} from "../../store/main/main.js";
-import {useDispatch} from "react-redux";
+import { senData, setChoicePlatformRedux} from "../../store/main/main.js";
+import {useDispatch, useSelector} from "react-redux";
 import {Link} from "react-router-dom";
 
 export const ChoicePlatform = () => {
     const [isHover, setIsHover] = useState(false)
-    const [choice, setChoice] = useState([])
+    const choice=useSelector(state => state.main.ChoiceUsePlatform)
     const dispatch = useDispatch()
     const choiceHandler = (el) => {
-        setChoice(prevState => [...prevState, el])
         dispatch(setChoicePlatformRedux(el))
     }
-    const deleteChoice = (text) => {
-        dispatch(deleteChoicePlatformRedux(text))
-        setChoice(prevState => prevState.filter(el => el !== text))
-    }
+
     const handlerNext=()=>{
         dispatch(senData())
     }
@@ -48,9 +43,9 @@ export const ChoicePlatform = () => {
                     </div>
                 </div>
                 <div className={S.choice}>
-                    {choiceUsePlatform.map(el => <Choice key={el} action={choiceHandler}
-                                                         choice={choice} text={el}
-                                                         deleteChoice={deleteChoice}/>)}
+                    {choice.map(el => <Choice key={el.item} action={choiceHandler}
+                                                         item={el}
+                                                         />)}
                 </div>
                 <div className={S.btnNav}>
                     <Link to={"/"}>
