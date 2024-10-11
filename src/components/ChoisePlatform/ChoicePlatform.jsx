@@ -4,7 +4,7 @@ import Quest from "../../assets/question.svg";
 import {choiceUsePlatform} from "../dataStatic/choiceUsePlatform.js";
 import {Choice} from "../shared/Choice/Choice";
 import {useState} from "react";
-import {deleteChoicePlatformRedux, setChoicePlatformRedux} from "../../store/main/main.js";
+import {deleteChoicePlatformRedux, senData, setChoicePlatformRedux} from "../../store/main/main.js";
 import {useDispatch} from "react-redux";
 import {Link} from "react-router-dom";
 
@@ -19,6 +19,9 @@ export const ChoicePlatform = () => {
     const deleteChoice = (text) => {
         dispatch(deleteChoicePlatformRedux(text))
         setChoice(prevState => prevState.filter(el => el !== text))
+    }
+    const handlerNext=()=>{
+        dispatch(senData())
     }
     return (
         <div className={S.container}>
@@ -54,7 +57,7 @@ export const ChoicePlatform = () => {
                         <button className={S.back}>Назад
                         </button>
                     </Link>
-                    <button className={S.next}>Продолжить</button>
+                    <button onClick={handlerNext} className={S.next}>Продолжить</button>
                 </div>
             </div>
         </div>

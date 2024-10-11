@@ -7,7 +7,8 @@ const initialState = {
     formJob: [],
     formCount: [],
     FormManager: [],
-    ChoiceUsePlatform: []
+    ChoiceUsePlatform: [],
+    success: false
 
 
 };
@@ -15,9 +16,10 @@ const initialState = {
 export const senData = createAsyncThunk(
     "cart/senData",
     async (params) => {
+        console.log(12121)
 
         const {data} = await axios.get(
-            `http://188.68.219.194:2025/getAllProduct`
+            `https://jsonplaceholder.typicode.com/todos/1`
         );
         return data;
     }
@@ -32,7 +34,7 @@ export const main = createSlice({
             state.isLoading = true;
         });
         builder.addCase(senData.fulfilled, (state, {payload}) => {
-            state.products = [...payload];
+            state.success = !state.success;
             state.isLoading = false;
         });
         builder.addCase(senData.rejected, (state, {payload}) => {
