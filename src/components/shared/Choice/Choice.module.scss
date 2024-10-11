@@ -14,11 +14,7 @@
   -webkit-box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.75);
-  &:hover {
-    background-color: $blackButton;
-    color: $white;
-    border-color: transparent;
-  }
+
 
 
   &.active {
@@ -32,10 +28,22 @@
   }
 }
 
+@media(hover){
+  .body {
+
+    &:hover {
+      background-color: $blackButton;
+      color: $white;
+      border-color: transparent;
+    }
+}}
+
+
 @media only screen and (max-width: 480px) {
   .body {
     font-size: 17px;
     padding: 7px 12px;
+
   }
 }
 @media only screen and (max-width: 380px) {
