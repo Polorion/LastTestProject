@@ -58,7 +58,7 @@
 
     h1 {
       font-size: 32px;
-      color: $black;
+      color: $blackButton;
       margin-bottom: 16px;
       font-weight: 600;
     }
@@ -82,13 +82,13 @@
     .back {
       background-color: $white;
       margin-right: 38px;
-      color: $black;
+      color: $blackButton;
       border-radius: 10px;
     }
 
     .next {
       padding: 17px 38px;
-      background-color: $black;
+      background-color: $blackButton;
       color: $white;
       border-radius: 10px;
     }
@@ -116,7 +116,7 @@
       .back {
         background-color: $white;
         margin-right: 0px;
-        color: $black;
+        color: $blackButton;
         border-radius: 10px;
         width: 100%;
         text-align: center;
@@ -127,7 +127,7 @@
       .next {
         padding: 17px 38px;
 
-        background-color: $black;
+        background-color: $blackButton;
         color: $white;
         border-radius: 10px;
         width: 100%;
