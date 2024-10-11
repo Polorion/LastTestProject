@@ -5,8 +5,6 @@
     position: relative;
     padding: 13px;
     margin: 0 auto;
-    max-height: 120vh;
-    overflow: hidden;
 }
 
 .slide-enter,
