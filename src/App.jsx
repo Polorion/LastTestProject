@@ -8,7 +8,7 @@ import {
     Routes
 } from "react-router-dom";
 import {TransitionGroup, CSSTransition} from "react-transition-group";
-import 'App.css'
+import './App.css'
 import Layout from "./components/layout/Layout.jsx";
 import {InfoBusiness} from "./components/InfoBusiness/InfoBusiness.jsx";
 import {ChoicePlatform} from "./components/ChoisePlatform/ChoicePlatform.jsx";
