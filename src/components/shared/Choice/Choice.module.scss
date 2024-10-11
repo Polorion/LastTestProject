@@ -36,6 +36,12 @@
     padding: 7px 12px;
   }
 }
+@media only screen and (max-width: 380px) {
+  .body {
+    font-size: 11px;
+    padding: 5px 8px;
+  }
+}
 
 @keyframes example {
   0% {

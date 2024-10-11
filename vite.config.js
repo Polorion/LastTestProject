@@ -9,5 +9,7 @@ export default defineConfig({
     svgx(),
     svgLoader()
   ],
-
+  server: {
+    host: true
+  }
 })
