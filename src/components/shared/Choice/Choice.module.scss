@@ -12,6 +12,11 @@
   -webkit-box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  &:hover {
+    background-color: $blackButton;
+    color: $white;
+    border-color: transparent;
+  }
 
 
   &.active {
