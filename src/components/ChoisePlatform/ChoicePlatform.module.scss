@@ -1,7 +1,6 @@
 @import "src/scss/vars";
 
 .container {
-  padding: 0 10px;
 
 }
 
@@ -61,7 +60,7 @@
       font-size: 32px;
       color: $blackButton;
       margin-bottom: 16px;
-      font-weight: 600;
+      font-weight: 900;
     }
 
     p {
@@ -101,11 +100,14 @@
     .header {
       h1 {
         text-align: center;
+        font-size: 20px ;
       }
 
       p {
         text-align: center;
+        font-size: 13px;
       }
+
     }
 
     .btnNav {

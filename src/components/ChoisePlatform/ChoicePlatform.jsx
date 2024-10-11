@@ -43,7 +43,7 @@ export const ChoicePlatform = () => {
                     </div>
                 </div>
                 <div className={S.choice}>
-                    {choice.map(el => <Choice key={el.item} action={choiceHandler}
+                    {choice.map(el => <Choice mobile={true} key={el.item} action={choiceHandler}
                                                          item={el}
                                                          />)}
                 </div>

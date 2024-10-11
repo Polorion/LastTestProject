@@ -57,6 +57,29 @@
     padding: 5px 8px;
   }
 }
+@media only screen and (max-width: 413px) {
+  .body {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+}
+@media only screen and (max-width: 509px) {
+  .mobile {
+    font-size: 15px;
+    padding: 4px 8px;
+  }
+}
+@media only screen and (max-width: 469px) {
+  .mobile {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+}@media only screen and (max-width: 389px) {
+  .mobile {
+    font-size: 10px;
+    padding: 4px 8px;
+  }
+}
 
 @keyframes example {
   0% {
