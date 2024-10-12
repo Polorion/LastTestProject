@@ -13,3 +13,15 @@
     justify-content: center;
   }
 }
+@media only screen and (max-width: 400px) {
+  .body {
+    margin-top: 39px;
+    margin-bottom: 37px;}
+  .logo {
+    display: flex;
+    justify-content: center;
+    img {
+      width: 130px;
+    }
+  }
+}

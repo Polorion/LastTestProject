@@ -5,7 +5,9 @@
     position: relative;
     padding: 13px;
     margin: 0 auto;
+
 }
+
 
 .slide-enter,
 .slide-exit {
@@ -31,4 +33,10 @@
 .slide-exit-active {
     transform: translateX(-3000%);
     display: none;
+}
+
+@media only screen and (max-width: 400px) {
+    .container{
+        padding: 0 5px;
+    }
 }

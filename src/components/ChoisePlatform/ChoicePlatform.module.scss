@@ -79,6 +79,7 @@
   }
 
   .btnNav {
+
     .back {
       background-color: $white;
       margin-right: 38px;
@@ -87,6 +88,7 @@
     }
 
     .next {
+
       padding: 17px 38px;
       background-color: $blackButton;
       color: $white;
@@ -97,15 +99,22 @@
 
 @media only screen and (max-width: 480px) {
   .body {
+    .choice {
+      margin-bottom: 140px
+    }
+    padding: 0 10px;
     .header {
+      margin-top: 42px;
       h1 {
         text-align: center;
-        font-size: 20px ;
+        font-size: 18px ;
       }
 
       p {
         text-align: center;
         font-size: 13px;
+        letter-spacing: 0.4px;
+        margin-bottom: 30px;
       }
 
     }
@@ -113,8 +122,11 @@
     .btnNav {
       display: flex;
       flex-direction: column;
-      width: 100%;
+      width: 90%;
       align-items: center;
+      a {
+        order: 1;
+      }
 
       .back {
         background-color: $white;
@@ -124,12 +136,12 @@
         width: 100%;
         text-align: center;
         padding: 17px 38px;
-        order: 2;
+        order: 1;
       }
 
       .next {
         padding: 17px 38px;
-
+order: 0;
         background-color: $blackButton;
         color: $white;
         border-radius: 10px;
