@@ -28,11 +28,12 @@
     left: 0;
     width: 100%;
     transform: translateX(10%);
+
 }
 
 .slide-exit-active {
-    transform: translateX(-3000%);
-    display: none;
+    transform: translateY(-11000px);
+    display: none!important;
 }
 
 @media only screen and (max-width: 400px) {
