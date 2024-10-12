@@ -11,9 +11,7 @@
   cursor: pointer;
   font-size: 14.5px;
   transition: all 0.5s;
-  -webkit-box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.75);
+
 
 
 
@@ -21,10 +19,7 @@
     background-color: $blackButton;
     color: $white;
     border-color: transparent;
-    -webkit-box-shadow: inset 9px 12px 5px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: inset 9px 12px 5px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: inset 9px 12px 5px 0px rgba(0, 0, 0, 0.75);
-    animation: example 1s ease;
+
   }
 }
 
